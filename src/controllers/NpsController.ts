@@ -11,7 +11,7 @@ class NpsController {
 
         const surveysUsers = await surveysUsersRepository.find({
             survey_id,
-            value: Not(IsNull)
+            value: Not(IsNull())
         })
 
         const detractors = surveysUsers.filter(survey => 
